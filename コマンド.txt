@@ -1,0 +1,29 @@
+
+
+c:\xampp73\xampp\php\php composer.phar create-project --prefer-dist "laravel/laravel=5.*" laravel
+c:\xampp73\xampp\php\php artisan serve
+
+c:\xampp73\xampp\php\php artisan make:controller HelloController2
+
+
+c:\xampp73\xampp\php\php composer.phar create-project --prefer-dist "laravel/laravel=5.*" laravel
+c:\xampp73\xampp\php\php artisan serve
+
+c:\xampp73\xampp\php\php artisan make:controller HelloController
+
+
+c:\xampp73\xampp\php\php artisan make:provider MessageServiceProvider
+
+c:\xampp73\xampp\php\php artisan make:middleware HelloMiddleware
+
+c:\xampp73\xampp\php\php artisan make:middleware LinkMiddleware
+
+
+c:\xampp73\xampp\php\php artisan make:provider HelloServieProvider
+
+
+
+c:\xampp73\xampp\php\php artisan make:request HelloRequest
+
+
+c:\xampp73\xampp\php\php artisan cache:clear
