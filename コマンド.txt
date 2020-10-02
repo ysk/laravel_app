@@ -27,3 +27,18 @@ c:\xampp73\xampp\php\php artisan make:request HelloRequest
 
 
 c:\xampp73\xampp\php\php artisan cache:clear
+
+
+c:\xampp73\xampp\php\php artisan make:migration create_people_table
+
+
+c:\xampp73\xampp\php\php artisan migrate
+
+
+c:\xampp73\xampp\php\php artisan make:seeder PeopleTableSeeder
+c:\xampp73\xampp\php\php artisan db:seed
+
+
+c:\xampp73\xampp\php\php artisan make:model Person
+
+c:\xampp73\xampp\php\php artisan make:controller PersonController

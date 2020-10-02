@@ -12,3 +12,5 @@ Route::post('hello/edit', 'HelloController@update')->name('hello.update');
 
 Route::get('hello/del', 'HelloController@del')->name('hello.del');
 Route::post('hello/del', 'HelloController@remove')->name('hello.remove');
+
+Route::get('hello/show', 'HelloController@show')->name('hello.show');
