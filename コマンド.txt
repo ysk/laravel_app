@@ -41,4 +41,4 @@ c:\xampp73\xampp\php\php artisan db:seed
 
 c:\xampp73\xampp\php\php artisan make:model Person
 
-c:\xampp73\xampp\php\php artisan make:controller PersonController
+c:\xampp73\xampp\php\php artisan make:controller PersonController2
