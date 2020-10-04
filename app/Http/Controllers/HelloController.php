@@ -46,7 +46,7 @@ class HelloController extends Controller {
             'mail' => $request->mail,
             'age'  => $request->age,
         ];
-        DB::update('UPDATE people SET name=:name, mail=:mail, age=:age WHERE id=:id', $param);
+        // DB::update('UPDATE people SET name=:name, mail=:mail, age=:age WHERE id=:id', $param);
         DB::table('people')
             ->where('id', $request->id)
             ->update($param);
