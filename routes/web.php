@@ -17,7 +17,6 @@ Route::get('hello/show', 'HelloController@show')->name('hello.show');
 
 Route::get('hello/rest', 'HelloController@rest')->name('hello.rest');
 
-
 Route::get('person', 'PersonController@index')->name('person.index');
 
 Route::get('person/find', 'PersonController@find')->name('person.find');
@@ -41,3 +40,5 @@ Route::post('board/add', 'BoardController@create')->name('board.create');
 Route::resource('rest', 'RestappController');
 
 
+Route::get('hello/session', 'HelloController@ses_get')->name('hello.session.get');
+Route::post('hello/session', 'HelloController@ses_put')->name('hello.session.put');

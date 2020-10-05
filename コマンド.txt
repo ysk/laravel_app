@@ -48,7 +48,7 @@ c:\xampp73\xampp\php\php artisan db:seed
 
 c:\xampp73\xampp\php\php artisan make:controller RestappController --resource
 
-
+c:\xampp73\xampp\php\php artisan session:table
 
 INSERT INTO restdata(message, url) VALUES ('Google Japan', 'https://www.google.co.jp');
 INSERT INTO restdata(message, url) VALUES ('Yahoo Japan', 'https://www.yahoo.co.jp');
