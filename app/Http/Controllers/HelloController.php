@@ -46,10 +46,7 @@ class HelloController extends Controller {
             'mail' => $request->mail,
             'age'  => $request->age,
         ];
-        // DB::update('UPDATE people SET name=:name, mail=:mail, age=:age WHERE id=:id', $param);
-        DB::table('people')
-            ->where('id', $request->id)
-            ->update($param);
+        DB::table('people')->where('id', $request->id)->update($param);
         return redirect('/hello');
     }
 
@@ -71,5 +68,20 @@ class HelloController extends Controller {
         return view('hello.show', ['items'=>$items]);
     }
 
+    public function rest(Request $request) {
+        return view('hello.rest');
+    }
+
+
+    public function ses_get(Request $request) {
+        $sesdata = $request->session()->get('session_data');
+        return view('hello.session', ['session_data' => $sesdata]);
+    }
+
+    public function ses_put(Request $request) {
+        $msg = $request->input;
+        $request->session()->put('session_data', $msg);
+        return redirect('hello/session');
+    }
 
 }
