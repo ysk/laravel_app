@@ -5,13 +5,26 @@ namespace App\Http\Controllers;
 use App\Http\Requests\HelloRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Auth;
+use App\Person;
 
 class HelloController extends Controller {
 
     public function index(Request $request) {
-        $items = DB::table('people')->get();
-        return view('hello.index', ['items'=> $items]);
+        $user = Auth::user();
+        if(!$request->sort) {
+            $sort = 'id';
+        } else {
+            $sort = $request->sort;
+        }        
+        $items = Person::orderBy($sort, 'asc')
+                ->paginate(3);
+        $param = [
+           'items' => $items,
+           'sort'  => $sort,
+           'user'  => $user,
+        ];
+       return view('hello.index', $param);
     }
 
     public function post(Request $request){

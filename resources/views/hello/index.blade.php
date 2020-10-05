@@ -16,17 +16,31 @@ td{
   color: #999;
   padding: 5px 10px;
 }
+.pagination{
+  font-size: 14px;
+}
+.pagination li{
+  display: inline-block;
+}
 </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 
 <h1>一覧</h1>
+
+
+@if(Auth::check())
+  <p>USER: {{$user->name . ' (' . $user->email . ')'}}</p>
+@else
+  <p>※ログインしていません(<a href="/login">ログイン</a>) | <a href="/register">登録</a>
+@endif
 <table>
 <tr>
 <th>id</th>
-  <th>name</th>
-  <th>mail</th>
-  <th>age</th>
+  <th><a href="/hello?sort=name">name</a></th>
+  <th><a href="/hello?sort=mail">mail</a></th>
+  <th><a href="/hello?sort=age">age</a></th>
    <th></th>
 
 </tr>
@@ -39,7 +53,10 @@ td{
   <td><a href="{{route('hello.show')}}?id={{$item->id}}">詳細ページ</a></td>
 </tr>
 @endforeach
+
 </table>
+{{ $items->appends(['sort' => $sort])->links() }}
+
 
 <p><a href="{{route('hello.add')}}">新規登録</a></p>
 

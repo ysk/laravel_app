@@ -46,9 +46,9 @@ c:\xampp73\xampp\php\php artisan db:seed
 
 
 
-<<<<<<< HEAD
+
 c:\xampp73\xampp\php\php artisan make:controller PersonController2
-=======
+
 c:\xampp73\xampp\php\php artisan make:controller RestappController --resource
 
 c:\xampp73\xampp\php\php artisan session:table
@@ -56,4 +56,18 @@ c:\xampp73\xampp\php\php artisan session:table
 INSERT INTO restdata(message, url) VALUES ('Google Japan', 'https://www.google.co.jp');
 INSERT INTO restdata(message, url) VALUES ('Yahoo Japan', 'https://www.yahoo.co.jp');
 INSERT INTO restdata(message, url) VALUES ('MSN Japan', 'https://www.msn.com/ja-jp');
->>>>>>> 71aaf5590de3aca86ca51179f3576f5f774ae975
+
+php artisan vendor:publish --tag=laravel-pagination
+
+
+CREATE TABLE `laravel`.`users` ( 
+    `id` INT NOT NULL AUTO_INCREMENT , 
+    `name` VARCHAR NOT NULL , 
+    `email` VARCHAR NOT NULL , 
+    `email_verified_at` DATETIME NULL , 
+    `password` VARCHAR NOT NULL , 
+    `remember_token` VARCHAR NOT NULL , 
+    `created_at` DATETIME NOT NULL , 
+    `updated_at` DATETIME NOT NULL , 
+    PRIMARY KEY (`id`)
+);
