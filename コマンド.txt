@@ -41,3 +41,15 @@ c:\xampp73\xampp\php\php artisan make:migration create_restdata_table
 c:\xampp73\xampp\php\php artisan make:model Restdata
 
 c:\xampp73\xampp\php\php artisan make:seeder RestdataTableSeeder
+
+c:\xampp73\xampp\php\php artisan db:seed
+
+
+
+c:\xampp73\xampp\php\php artisan make:controller RestappController --resource
+
+
+
+INSERT INTO restdata(message, url) VALUES ('Google Japan', 'https://www.google.co.jp');
+INSERT INTO restdata(message, url) VALUES ('Yahoo Japan', 'https://www.yahoo.co.jp');
+INSERT INTO restdata(message, url) VALUES ('MSN Japan', 'https://www.msn.com/ja-jp');

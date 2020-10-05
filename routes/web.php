@@ -15,6 +15,9 @@ Route::post('hello/del', 'HelloController@remove')->name('hello.remove');
 
 Route::get('hello/show', 'HelloController@show')->name('hello.show');
 
+Route::get('hello/rest', 'HelloController@rest')->name('hello.rest');
+
+
 Route::get('person', 'PersonController@index')->name('person.index');
 
 Route::get('person/find', 'PersonController@find')->name('person.find');
@@ -34,4 +37,7 @@ Route::post('person/del', 'PersonController@remove')->name('person.remove');
 Route::get('board', 'BoardController@index')->name('board.index');
 Route::get('board/add', 'BoardController@add')->name('board.add');
 Route::post('board/add', 'BoardController@create')->name('board.create');
+
+Route::resource('rest', 'RestappController');
+
 
