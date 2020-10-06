@@ -59,6 +59,7 @@ INSERT INTO restdata(message, url) VALUES ('MSN Japan', 'https://www.msn.com/ja-
 
 php artisan vendor:publish --tag=laravel-pagination
 
+c:\xampp73\xampp\php\php artisan make:test HelloTest
 
 CREATE TABLE `laravel`.`users` ( 
     `id` INT NOT NULL AUTO_INCREMENT , 
